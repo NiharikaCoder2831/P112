@@ -1,0 +1,69 @@
+ 
+<html>
+  <head>
+    <title>Hand Gesture web app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+ 
+  <center>
+<h2 id="title1" class="btn btn-info">Hand gesture web app
+</h2>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate result
+      	<br>
+        <b style="color: yellow">Are you feeling the best?</b>
+        <br>
+        <b style="color: black">Are you feeling amazing?</b>
+        <br>
+        <b style="color: red">Are you feeling victorious?</b>
+        <br>
+      </p>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+	      <label class="lb">Webcam View - </label>
+<br>
+<div id="camera"></div>
+        <br><br>
+<button class="btn btn-info" onclick="capture()">Capture Image</button>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+<h4 class="lb">Prediction- </h4>
+  <br><h4 id="emtn1" class="emotion_name"></h4>
+  <br><br>
+  <h4 id="emoji1" class="emoji"></h4><br>
+  <h4 id="emtn2" class="emotion_name"></h4><br><br>
+  <h4 id="emoji2" class="emoji"></h4>
+</div>
+      
+      <div class="col-md-4 col-sm-4 col-xs-12">
+	      <label class="lb">Snapshot - </label>
+<br>
+<div id="result1"></div>
+        <br><br>
+<button class="btn btn-success" onclick="predict1()">Predict Emotion</button>
+      </div>
+      <div id="result2"></div>
+      <br><br>
+<button class="btn btn-success" onclick="predict2()">Predict Second Emotion</button>
+    </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
